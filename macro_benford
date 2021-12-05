@@ -1,0 +1,298 @@
+Sub limpiar()
+    Sheets("interfaz").Range("H22:H30").ClearContents
+    Sheets("interfaz").Range("O22:O111").ClearContents
+        
+End Sub
+
+Sub prueba()
+
+Dim nsp, asp As String
+    nsp = Range("D5").Value
+    asp = Range("D7").Value
+    
+'seleccion de todos los niveles y ambitos
+If (nsp = "TODOS") And (asp = "TODOS") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("bdo").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("bdo").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "TODOS") And (asp = "EJECUTIVO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("TE").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("TE").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "TODOS") And (asp = "LEGISLATIVO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("TL").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("TL").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "TODOS") And (asp = "JUDICIAL") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("TJ").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("TJ").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+
+ElseIf (nsp = "TODOS") And (asp = "ORGANO AUTONOMO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("TO").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("TO").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "FEDERAL") And (asp = "EJECUTIVO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("FE").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("FE").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "FEDERAL") And (asp = "LEGISLATIVO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("FL").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("FL").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "FEDERAL") And (asp = "JUDICIAL") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("FJ").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("FJ").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "FEDERAL") And (asp = "ORGANO AUTONOMO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("FO").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("FO").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "FEDERAL") And (asp = "TODOS") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("FT").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("FT").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "ESTATAL") And (asp = "EJECUTIVO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("EE").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("EE").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "ESTATAL") And (asp = "LEGISLATIVO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("EL").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("EL").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "ESTATAL") And (asp = "JUDICIAL") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("EJ").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("EJ").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "ESTATAL") And (asp = "ORGANO AUTONOMO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("EO").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("EO").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "ESTATAL") And (asp = "TODOS") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("ET").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("ET").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "MUNICIPAL/ALCALDIA") And (asp = "EJECUTIVO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("ME").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("ME").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "MUNICIPAL/ALCALDIA") And (asp = "LEGISLATIVO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("ML").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("ML").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "MUNICIPAL/ALCALDIA") And (asp = "JUDICIAL") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("MJ").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("MJ").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "MUNICIPAL/ALCALDIA") And (asp = "ORGANO AUTONOMO") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("MO").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("MO").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+ElseIf (nsp = "MUNICIPAL/ALCALDIA") And (asp = "TODOS") Then
+
+Sheets("interfaz").Range("H22:H30").ClearContents
+Sheets("interfaz").Range("O22:O111").ClearContents
+    'ciclos que tabulan la prueba de benford para el primer dígito
+    For k = 1 To 9
+        Cells(21 + k, 8) = Application.WorksheetFunction.CountIf(Sheets("MT").Range("F:F"), Cells(21 + k, 7))
+    Next k
+            
+    'ciclos que tabulan la prueba de benford de los primeros dos dígitos
+    For l = 1 To 90
+        Cells(21 + l, 15) = Application.WorksheetFunction.CountIf(Sheets("MT").Range("G:G"), Cells(21 + l, 14))
+    Next l
+
+Else: MsgBox ("ERROR: Elección incorrecta")
+End If
+
+End Sub
